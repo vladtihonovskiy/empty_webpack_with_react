@@ -1,0 +1,40 @@
+@import "../../styles/constants";
+
+.user-reviews-form {
+    padding: 50px 0 50px 0;
+    &__wrapper {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 35px;
+        background: linear-gradient(to bottom, lighten(@main-background-color, 60%), @main-background-color);
+        border-radius: 10px;
+
+        &__text {
+            font-size: 36px;
+            color: #FF8C00;
+        }
+
+        &__input {
+            width: 100%;
+            margin-top: 10px;
+            padding: 15px;
+        }
+
+        &__textarea {
+            width: calc(100% - 30px);
+            padding: 15px;
+        }
+    }
+
+    &__button {
+        display: block;
+        text-align: center;
+        border-radius: 20px;
+        padding: 17px;
+        background-color: rgba(227,175,3,0.99);
+        font-size: 16px;
+        color: #FFFFFF;
+        margin: 20px auto;
+        width: 228px;
+    }
+}

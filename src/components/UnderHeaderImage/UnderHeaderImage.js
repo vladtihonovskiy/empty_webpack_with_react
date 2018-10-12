@@ -12,7 +12,7 @@ class UnderHeaderImage extends Component {
 				<div className={classes.underHeaderImage}>
 					<div className={classes.underHeaderImageWrapper} style={{backgroundImage}} />
 
-					<Grid className={classes.underHeaderImageText}>
+					<Grid className={classes.underHeaderImageContent}>
 						<Row>
 							<h2>
 								ЭКЗОТИЧЕСКИЕ ФРУКТЫ ИЗ ТАИЛАНДА, ВЬЕТНАМА И БРАЗИЛИИ
@@ -29,10 +29,9 @@ class UnderHeaderImage extends Component {
 								в любое удобное для Вас время.
 								Всегда в наличии 24 вида фруктов.
 							</p>
+							<a> Заказать Фрукты</a>
 						</Row>
 					</Grid>
-
-					<a> Заказать Фрукты</a>
 				</div>
 
 		);

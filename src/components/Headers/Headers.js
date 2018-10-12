@@ -4,8 +4,10 @@ import { Grid, Row, Col } from 'react-bootstrap';
 
 import classes from "./Headers.less";
 
+
 class Headers extends Component {
 	render() {
+
 		return (
 			<header className={classes.headers}>
 				<div className={classes.headersBackground}>
@@ -25,37 +27,43 @@ class Headers extends Component {
 								<p>exoticlab@mail.ru</p>
 								<p>+7(917)585-64-32</p>
 							</div>
-							<div className={classes.headersContactsBtn}>
-								<a> Контакты </a>
-							</div>
+							{/*<div className={classes.headersContactsBtn}>*/}
+								{/*<a> Контакты </a>*/}
+							{/*</div>*/}
 						</Col>
 					</Row>
 
 					<Row className={classes.headersRowBtn}>
-						<Col xs={12} md={3} >
+						<Col xs={6} md={2}>
 							<a> О КОМПАНИИ </a>
 						</Col>
-						<Col xs={12} md={3} >
+						<Col xs={6} md={2}>
 							<a> ОТЗЫВЫ </a>
 						</Col>
-						<Col xs={12} md={3} >
+						<Col xs={6} md={2}>
 							<a> ЦЕНЫ </a>
 						</Col>
-						<Col xs={12} md={3} >
+						<Col xs={6} md={2}>
 							<a> ДОСТАВКА И ОПЛАТА </a>
+						</Col>
+						<Col xs={6} md={2} >
+							<a> ВОПРОСЫ </a>
+						</Col>
+						<Col xs={6} md={2} >
+							<a onClick={this.props.handleScrollToElement}> КОНТАКТЫ </a>
 						</Col>
 					</Row>
 				</Grid>
 
 				</div>
 				<div className={classes.headersSvgWrapper}>
-					<Grid>
-						<Row className={"text-center"}>
-							<Col xs={12} md={3} className={classes.headersButtonCenter}>
-								<a> ВОПРОСЫ </a>
-							</Col>
-						</Row>
-					</Grid>
+					{/*<Grid>*/}
+						{/*<Row className={"text-center"}>*/}
+							{/*<Col xs={12} md={3} className={classes.headersButtonCenter}>*/}
+								{/*<a> ВОПРОСЫ </a>*/}
+							{/*</Col>*/}
+						{/*</Row>*/}
+					{/*</Grid>*/}
 
 					<div className={classes.headersSvgContainer}>
 						<svg className={classes.headersSvg} xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 100 100" preserveAspectRatio="none">

@@ -1,7 +1,7 @@
 .under-header-image {
     display: block;
     position: relative;
-    height: 1000px;
+    height: 700px;
     width: 100%;
 
     &__wrapper {
@@ -15,28 +15,45 @@
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
+        filter: blur(3.6px);
     }
 
-    &__text {
+    &__content {
         margin: 0 auto;
         padding-top: 80px;
         text-align: center;
         color: #FFFFFF;
-        width: 1170px;
 
         h1 {
+            display: block;
             padding-top: 25px;
             font-size:64px;
         }
 
         h2{
+            display: block;
             margin: 0;
         }
 
         p {
+            display: block;
             font-size: 28px;
-            padding: 25px 35px 0 35px;
+            padding: 25px 50px 0 50px;
+        }
+
+        a {
+            display: block;
+            text-align: center;
+            border-radius: 20px;
+            padding: 17px;
+            background-color: rgba(227,175,3,0.99);
+            font-size: 16px;
+            color: #FFFFFF;
+            width: 240px;
+            margin: 40px auto;
         }
     }
 }
 
+@import "./UnderHeaderImage.tablet.less";
+@import "./UnderHeaderImage.mobile.less";

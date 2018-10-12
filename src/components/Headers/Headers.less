@@ -1,12 +1,15 @@
+@import "../../styles/constants";
+
 .headers {
     display: block;
     z-index: 1;
+
     &_background {
-        background: linear-gradient(to bottom,#C2D0C3, #285A2C);
+        background: linear-gradient(to bottom, lighten(@main-background-color, 70), @main-background-color);
     }
 
     &__wrapper {
-        padding: 25px 0;
+        padding-top: 25px;
     }
 
     &__label {
@@ -32,11 +35,13 @@
 
     &__contacts_wrapper {
         display: flex;
-        align-items: end;
+        align-items: center;
         justify-content: flex-end;
     }
 
     &__contacts_text {
+        min-width: 150px;
+
         p {
             font-size: 18px;
             font-style: normal;
@@ -48,44 +53,27 @@
         padding-left: 15px;
 
         a {
-            display: block;
             text-align: center;
-            padding: 12px 25px;
+            border-radius: 20px;
             font-size: 16px;
-            border-radius: 255px;
+            margin: 0 auto;
+            padding: 11px;
         }
     }
 
     &__row_btn {
-
-        a {
-            display: block;
-            text-align: center;
-            border-radius: 20px;
-            padding: 17px;
-            background-color: rgba(227,175,3,0.99);
-            font-size: 16px;
-            color: #FFFFFF;
-            width: 100%;
-        }
-    }
-
-    &__button_center {
-        padding-top: 15px;
-        margin: 0 auto;
-        float: unset;
-        z-index: 3;
-        a {
-            display: block;
-            text-align: center;
-            border-radius: 20px;
-            padding: 17px;
-            background-color: rgba(227,175,3,0.99);
-            font-size: 16px;
-            color: #FFFFFF;
-            width: 100%;
-        }
-    }
+            a {
+                display: flex;
+                text-align: center;
+                border-radius: 20px;
+                font-size: 16px;
+                margin: 0 auto;
+                padding: 5px;
+                min-height: 55px;
+                justify-content: center;
+                align-items: center;
+            }
+     }
 
     &__svg-wrapper {
         position: relative;
@@ -100,7 +88,9 @@
         position: absolute;
         top: 0;
         width: 100%;
-        height: 85px;
+        height: 20px;
         z-index: 2;
     }
 }
+
+@import "./Headers.tablet.less";

@@ -1,22 +1,52 @@
 import { toast } from 'react-toastify';
 
 
-export  default function customToastify(text, type = false) {
+export  default function customToastify(text, type = false, position = false) {
 	switch (type) {
 		case "error":
-			toast.error(text);
+			if(!position) {
+				toast.error(text);
+			} else {
+				toast.error(text, {
+					position: toast.POSITION[position]
+				});
+			}
 			break;
 		case "success":
-			toast.success(text);
+			if(!position) {
+				toast.success(text);
+			} else {
+				toast.success(text, {
+					position: toast.POSITION[position]
+				});
+			}
 			break;
 		case "info":
-			toast.info(text);
+			if(!position) {
+				toast.info(text);
+			} else {
+				toast.info(text, {
+					position: toast.POSITION[position]
+				});
+			}
 			break;
 		case "warn":
-			toast.warn(text);
+			if(!position) {
+				toast.warn(text);
+			} else {
+				toast.warn(text, {
+					position: toast.POSITION[position]
+				});
+			}
 			break;
 		default:
-			toast(text);
+			if(!position) {
+				toast(text);
+			} else {
+				toast(text, {
+					position: toast.POSITION[position]
+				});
+			}
 			break;
 	}
 }

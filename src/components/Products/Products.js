@@ -16,10 +16,12 @@ class Products extends Component {
 		return this.props.products.map((product) => {
 			return (
 				<Product
+					key={product._id}
 					description={product.description}
 					label={product.name}
 					img={product.imgUrl}
 					price={product.price}
+					_id={product._id}
 				/>
 			);
 		});
@@ -28,12 +30,13 @@ class Products extends Component {
 	renderTwoProducts = () => {
 		return this.props.products.map((product) => {
 			return (
-				<Col xs={12} md={6} className={classes.productsTwoProducts}>
+				<Col xs={12} key={product._id} md={6} className={classes.productsTwoProducts}>
 					<Product
 						description={product.description}
 						label={product.name}
 						img={product.imgUrl}
 						price={product.price}
+						_id={product._id}
 					/>
 				</Col>
 			);
@@ -47,12 +50,13 @@ class Products extends Component {
 					{
 						this.props.products.map((product) => {
 							return (
-								<Col xs={12} md={4} className={classes.productsThreeProducts}>
+								<Col xs={12} key={product._id} md={4} className={classes.productsThreeProducts}>
 									<Product
 										description={product.description}
 										label={product.name}
 										img={product.imgUrl}
 										price={product.price}
+										_id={product._id}
 									/>
 								</Col>
 							);

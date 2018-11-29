@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
-import { string } from "prop-types";
+import { string, func } from "prop-types";
 
 import { Grid, Row, Col } from 'react-bootstrap';
 
+import * as basketActions from "../../modules/basket/basket.actions";
+
 import classes from "./Product.less";
+import { connect } from "react-redux";
 
 class Product extends Component {
 	static propTypes = {
@@ -11,31 +14,13 @@ class Product extends Component {
 		description: string,
 		img: string,
 		price: string,
+		id: string,
+		addProduct: func
+
 	}
 
-	renderPopup = () => {
-		const { label, description, img, price } = this.props;
-
-		return (
-			<div className={classes.productPopup}>
-				<p className={classes.productLabel}>
-					{ label }
-				</p>
-				<img className={classes.productImage} src={img} alt="none"/>
-
-				<p className={classes.productDescription }>
-					{ description }
-				</p>
-
-				<p className={classes.productPrice}>
-					{ price }
-				</p>
-
-				<a className={classes.productButton}>
-					Добавить в корзину
-				</a>
-			</div>
-		);
+	onAddBtnClick = () => {
+		this.props.addProduct({_id:this.props._id});
 	}
 
 	render() {
@@ -57,7 +42,7 @@ class Product extends Component {
 						{ price }
 					</p>
 
-					<a className={classes.productButton}>
+					<a onClick={this.onAddBtnClick} className={classes.productButton}>
 						Добавить в корзину
 					</a>
 			</div>
@@ -66,4 +51,4 @@ class Product extends Component {
 	}
 }
 
-export default Product;
+export default connect(null, { ...basketActions })(Product);

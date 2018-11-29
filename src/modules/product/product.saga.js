@@ -16,7 +16,6 @@ function *getAllProduct() {
 		yield put(productAction.setAllProduct(result.products));
 	} catch (error) {
 		if (!error) {
-			console.log(error);
 			customToastify(error.message, "error");
 		} else {
 			customToastify(error, "error");

@@ -15,6 +15,7 @@ import ConditionOfDelivery from "./components/ConditionOfDelivery/ConditionOfDel
 import UserReviews from "./components/UserReviews/UserReviews";
 import UserReviewsForm from "./components/UserReviewsForm/UserReviewsForm";
 import ConnectWithUs from "./components/ConnectWithUs/ConnectWithUs";
+import Basket from "./components/Basket/Basket";
 
 import * as producActions from "./modules/product/product.actions";
 import * as commentsActions from "./modules/comment/comment.actions";
@@ -27,7 +28,7 @@ class App extends Component {
 		getAllProductSaga: func,
 		getAllCommentsSaga: func,
 		saveCommentSage: func,
-		comments: array
+		comments: array,
 	}
 
     state = {
@@ -40,7 +41,6 @@ class App extends Component {
 	}
 
 	handleScrollToElement = (event) => {
-	    console.log(this.state.contactRef);
 
 	    window.scrollTo({ top: this.state.contactRef.offsetTop, behavior: 'smooth' });
 	}
@@ -60,7 +60,7 @@ class App extends Component {
             <div className={classes.app}>
 				<ToastContainer />
 				<LoaderContainer />
-
+				<Basket />
                 <Headers handleScrollToElement={this.handleScrollToElement} />
                 <UnderHeaderImage />
                 <Products products={products} />
@@ -78,7 +78,8 @@ class App extends Component {
 function mapStateToProps({ product, comment }) {
 	return {
 		products: product.products,
-		comments: comment.comments
+		comments: comment.comments,
+
 	};
 }
 

@@ -1,0 +1,116 @@
+.modal {
+
+    &__header {
+        text-align: center;
+        background-color: #f5f5f5;
+    }
+
+    &__wrapper {
+        padding: 20px;
+    }
+
+    &__full-width {
+       width: 100%;
+    }
+
+    &__price_wrapper {
+        display: flex;
+        align-items: center;
+
+        div {
+            width: 50%;
+
+            input {
+                width: 100%;
+            }
+        }
+    }
+
+    &__product-wrapper {
+        height: 60px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        border-bottom: 1px solid #eaeaea;
+
+        p {
+            color: #434443;
+            font-size: 16px;
+            margin: 0;
+        }
+    }
+
+    &__product-left-block {
+    }
+
+    &__product-rigth-block {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        min-width: 150px;
+
+        button {
+            height: 26px;
+            width: 26px;
+            outline:none;
+            background-color: #ffffff;
+            border-radius: 100%;
+
+            &:hover {
+                background-color: #f3f3f3;
+            }
+        }
+    }
+
+    &__product-button-wrapper {
+        display: flex;
+        width: 100px;
+        align-items: center;
+        justify-content: space-around;
+        padding-right: 10px;
+    }
+
+    &__product-close-wrapper {
+        display: flex;
+        width: 200px;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__product-price {
+        margin: 0 auto !important;
+    }
+
+    &__footer {
+        text-align: left;
+        width: 100%;
+        &__hint-text {
+            color: #8f9399;
+            font-size: 14px;
+        }
+
+        &__bolt-text {
+            color: #434443;
+            font-size: 16px;
+        }
+    }
+
+    &__button {
+        width: 100%;
+    }
+
+    &__btn-disable {
+        border: 1px solid #e6e6e6;
+        opacity: .4;
+
+        &:hover {
+            background: 0 0!important;
+        }
+
+        &:focus {
+            outline: 0!important;
+        }
+    }
+}
